@@ -17,13 +17,6 @@
     <button onclick="runDemo()">点击运行演示</button>
 
     <script>
-        function runDemo() {
-            alert("Hello！");
-            document.body.style.backgroundColor = getRandomColor();
-            const now = new Date();
-            const timeString = now.toLocaleTimeString();
-            alert("当前时间是: " + timeString);
-        }
         function getRandomColor() {
             const letters = '0123456789ABCDEF';
             let color = '#';
@@ -32,6 +25,14 @@
             }
             return color;
         }
+        function runDemo() {
+            alert("Hello！");
+            document.body.style.backgroundColor = getRandomColor();
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            alert("当前时间是: " + timeString);
+        }
+        
     </script>
 </body>
 </html>
