@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript演示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript演示</h1>
+    <button onclick="runDemo()">点击运行演示</button>
+
+    <script>
+        function runDemo() {
+            alert("Hello！");
+            document.body.style.backgroundColor = getRandomColor();
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            alert("当前时间是: " + timeString);
+        }
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>
